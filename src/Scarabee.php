@@ -1,8 +1,8 @@
 <?php
 
-namespace Chapdel\scarabee;
+namespace Chapdel\Scarabee;
 
-use Chapdel\scarabee\Observers\QueryObserver;
+use Chapdel\Scarabee\Observers\QueryObserver;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
@@ -11,7 +11,7 @@ use Symfony\Component\VarDumper\Caster\ReflectionCaster;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 
-class scarabee
+class Scarabee
 {
     private $active = true;
     public $color = false;

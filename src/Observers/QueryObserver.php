@@ -1,6 +1,6 @@
 <?php
 
-namespace Chapdel\scarabee\Observers;
+namespace Chapdel\Scarabee\Observers;
 
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Support\Facades\DB;

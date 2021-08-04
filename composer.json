@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Chapdel\\scarabee\\": "src"
+            "Chapdel\\Scarabee\\": "src"
         },
         "files": [
             "src/helpers.php"
@@ -39,7 +39,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Chapdel\\scarabee\\Tests\\": "tests"
+            "Chapdel\\Scarabee\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -53,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Chapdel\\scarabee\\scarabeeServiceProvider"
+                "Chapdel\\Scarabee\\ScarabeeServiceProvider"
             ],
             "aliases": {
-                "scarabee": "Chapdel\\scarabee\\scarabeeFacade"
+                "scarabee": "Chapdel\\Scarabee\\ScarabeeFacade"
             }
         }
     },

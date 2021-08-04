@@ -1,13 +1,12 @@
 <?php
 
-namespace Chapdel\scarabee;
+namespace Chapdel\Scarabee;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Chapdel\scarabee\Commands\scarabeeCommand;
 use Chapdel\scarabee\Observers\QueryObserver;
 
-class scarabeeServiceProvider extends PackageServiceProvider
+class ScarabeeServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -21,8 +20,8 @@ class scarabeeServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews();
 
-        $this->app->bind(scarabee::class, function () {
-            $scarabee = new scarabee();
+        $this->app->bind(Scarabee::class, function () {
+            $scarabee = new Scarabee();
             $scarabee->checkActive();
 
             return $scarabee;

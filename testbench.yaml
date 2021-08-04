@@ -1,2 +1,2 @@
 providers:
-  - Chapdel\Skeleton\SkeletonServiceProvider
+  - Chapdel\Scarabee\ScarabeeServiceProvider

@@ -1,6 +1,6 @@
 <?php
 
-use Chapdel\scarabee\scarabee;
+use Chapdel\Scarabee\Scarabee;
 
 if (!function_exists('scarabee')) {
     /**
@@ -10,6 +10,6 @@ if (!function_exists('scarabee')) {
      */
     function scarabee(...$vars)
     {
-        return app(scarabee::class)->dump($vars);
+        return app(Scarabee::class)->dump($vars);
     }
 }

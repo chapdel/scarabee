@@ -1,13 +1,13 @@
 <?php
 
-namespace Chapdel\scarabee;
+namespace Chapdel\Scarabee;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Chapdel\scarabee\scarabee
  */
-class scarabeeFacade extends Facade
+class ScarabeeFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
