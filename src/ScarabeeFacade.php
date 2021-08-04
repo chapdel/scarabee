@@ -5,7 +5,7 @@ namespace Chapdel\Scarabee;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Chapdel\scarabee\scarabee
+ * @see \Chapdel\Scarabee\Scarabee
  */
 class ScarabeeFacade extends Facade
 {
