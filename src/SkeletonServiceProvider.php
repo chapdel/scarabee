@@ -1,12 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Chapdel\scarabee;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Chapdel\scarabee\Commands\scarabeeCommand;
+use Chapdel\scarabee\Observers\QueryObserver;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class scarabeeServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +17,22 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('scarabee')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasViews();
+
+        $this->app->bind(scarabee::class, function () {
+            $scarabee = new scarabee();
+            $scarabee->checkActive();
+
+            return $scarabee;
+        });
+
+        $this->app->bind(QueryObserver::class, function () {
+            $observer = new QueryObserver();
+            $observer->register();
+
+            return $observer;
+        });
     }
 }
